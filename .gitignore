@@ -1,0 +1,8 @@
+# Jupyter related
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Dataset
+WESAD.zip
+WESAD/
+data-input
