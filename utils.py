@@ -94,3 +94,55 @@ def split_df_nogrp(df, subject_column, label_column):
     X = df.drop(columns=['label'])
     y = df[['label']]
     return X, y
+
+def read_data(windowsize, stepsize):
+    '''
+    Takes the window size and steps size of the calculates features.
+    Returns X_train, y_train, groups_train, X_test, y_test, groups_test.
+    Prints out info during creation.
+    '''
+    
+    df = pd.read_parquet('data-input/flirt-wesad-acc-bvp-eda-temp-'+str(windowsize)+'-'+str(stepsize)+'.parquet')
+    
+    # remove columns (see EDA)
+    columns_to_drop = ['eda_EDA_n_sign_changes',
+     'temp_TEMP_peaks',
+     'acc_y_entropy',
+     'acc_l2_n_sign_changes',
+     'acc_x_entropy',
+     'acc_z_entropy',
+     'temp_l2_n_sign_changes',
+     'bvp_BVP_entropy',
+     'temp_TEMP_n_sign_changes',
+     'temp_l2_peaks',
+     'eda_l2_n_sign_changes']
+
+    df = df.drop(columns=columns_to_drop)
+    
+    # split into train and test
+    df_train, df_test = create_train_test(df, 5, 'subject', 'label')
+
+    X_train, y_train, groups_train = split_df(df_train, 'subject', 'label')
+    X_test, y_test, groups_test = split_df(df_test, 'subject', 'label')
+
+    # remove correlated features from train
+    X_train, selected_features = remove_correlated_features(X_train, 0.8)
+
+    # remove the same columns from test
+    X_test = X_test[selected_features]
+    
+    # print info
+    print('Window Size: ',windowsize,'  Stepsize: ',stepsize)
+    print('train shape: ', X_train.shape)
+    print('test shape: ', X_test.shape)
+    print('test columns: ',X_train.columns)
+    
+    # Check train and test set sizes
+    print('Percentage train set:', len(y_train)/(len(y_train)+len(y_test)))
+    print('Percentage test set:', len(y_test)/(len(y_train)+len(y_test)))
+
+    print('\nClass distribution in train set: \n', y_train['label'].value_counts(normalize=True), '\n')
+
+    print('Class distribution in test set: \n', y_test['label'].value_counts(normalize=True), '\n')
+    
+    return X_train, y_train, groups_train, X_test, y_test, groups_test
