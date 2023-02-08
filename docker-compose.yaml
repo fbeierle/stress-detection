@@ -1,0 +1,11 @@
+version: "1.0"
+
+services:
+  modelserving:
+    build: model-serving
+    ports:
+      - 8002:8002
+  webapp:
+    build: web-app
+    ports:
+      - 8003:8003
