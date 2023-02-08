@@ -1,6 +1,6 @@
 # Stress Recognition
 
-This project predicts stress from sensor data from Empatica E4 wrist bands. The project is build on public datasets. This is the capstone project of Felix Beierle in FourthBrain MLE cohort #10. For more details, check out the slides (link at bottom).
+This project predicts stress from sensor data from Empatica E4 wrist bands. The project is build on public datasets. This is the capstone project of Felix Beierle in FourthBrain MLE cohort #10. For more details, check out the deployed web-app or the slides (links below).
 
 ### ML Pipeline Infrastructure
 
@@ -8,7 +8,7 @@ This project predicts stress from sensor data from Empatica E4 wrist bands. The 
 
 ### Open TODOs
 
-Finish deployment and demonstrator webinterface.
+Finish deployment and demonstrator.
 
 ### Project Pitch Slides
 
@@ -24,6 +24,10 @@ docker compose up --build
 ```
 Then you can enter the web-app on port 8003. The model is being served at port 8002.
 
+
+### Deployed Web-App
+
+You can reach the deployed web-app here: http://5.189.182.28:8003/
 
 ### Query model
 
