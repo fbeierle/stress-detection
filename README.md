@@ -4,7 +4,7 @@ This project predicts stress from sensor data from Empatica E4 wrist bands. The 
 
 ### ML Pipeline Infrastructure
 
-<img src="web-app/images/stress-recognition-infrastructure.png" alt="mle-stack" width="650"/>
+<img src="web-app/images/stress-recognition-infrastructure.png" alt="mle-stack" width="700"/>
 
 ### Open TODOs
 
@@ -20,12 +20,12 @@ You can find the slides here: https://docs.google.com/presentation/d/1jYoSlDwUnz
 ```
 git checkout https://github.com/fbeierle/stress-recognition.git
 cd stress-recognition
-docker-compose up --build
+docker compose up --build
 ```
 Then you can enter the web-app on port 8003. The model is being served at port 8002.
 
 
-# Server
+### Query model
 
 You can query the model with an array of values which are features of the Empatica E4 sensor data.
 The server is started with
