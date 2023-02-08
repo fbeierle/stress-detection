@@ -8,7 +8,7 @@ This project predicts stress from sensor data from Empatica E4 wrist bands. The 
 
 ### Open TODOs
 
-Finish deployment and set up demonstrator webinterface.
+Finish deployment and demonstrator webinterface.
 
 ### Project Pitch Slides
 
