@@ -35,8 +35,8 @@ def train():
     df_test_nostress = df_test_nostress.drop(columns={'label'})
 
     # only use part of the data
-    df_test_stress = df_test_stress.head(100)
-    df_test_nostress = df_test_nostress.head(100)
+    df_test_stress = df_test_stress.sample(100)
+    df_test_nostress = df_test_nostress.sample(100)
 
     df_test_stress.to_parquet('../web-app/test-data/test-data-stress.parquet', compression='ZSTD')
     df_test_nostress.to_parquet('../web-app/test-data/test-data-nostress.parquet', compression='ZSTD')

@@ -23,7 +23,7 @@ with col1:
 
     df_ns = pd.read_parquet('test-data/test-data-nostress.parquet', engine='pyarrow')
     st.write('## Test data - Ground truth: no stress', df_ns)
-    selected_indices_ns = st.multiselect('Select rows:', df_ns.index)
+    selected_indices_ns = st.multiselect('Select rows:', df_ns.index, key='multiselect_nostress')
     selected_rows_ns = df_ns.loc[selected_indices_ns]
     st.write('#### Selected Rows', selected_rows_ns)
     st.markdown('Only the first row will be send to the model')
@@ -38,7 +38,7 @@ with col1:
 
     df_s = pd.read_parquet('test-data/test-data-stress.parquet', engine='pyarrow')
     st.write('## Test data - Ground truth: stress', df_s)
-    selected_indices_s = st.multiselect('Select rows:', df_s.index)
+    selected_indices_s = st.multiselect('Select rows:', df_s.index, key='multiselect_stress')
     selected_rows_s = df_s.loc[selected_indices_s]
     st.write('#### Selected Rows', selected_rows_s)
     st.markdown('Only the first row will be send to the model')
