@@ -4,12 +4,12 @@ import json
 import requests
 
 st.set_page_config(
-    page_title="Stress Recognition - Dr. Felix Beierle",
+    page_title="Stress Detection - Dr. Felix Beierle",
     page_icon="👋",
     #layout='wide'
 )
 
-st.title('Stress Recognition')
+st.title('Stress Detection')
 
 col1, col2 = st.columns(2)
 
@@ -17,9 +17,9 @@ with col1:
 
     st.write('### Problem')
     st.write('* Stress contributes to bad health and bad work performance')
-    st.write('* Recognizing stress immediately can help implement countermeasures')
+    st.write('* Detecting stress immediately can help implement countermeasures')
     st.write('### Solution')
-    st.write('* Automatically recognize stress from wristband sensor data')
+    st.write('* Automatically detect stress from wristband sensor data')
 
 
     st.write('Code is here: https://github.com/fbeierle/stress-recognition')
