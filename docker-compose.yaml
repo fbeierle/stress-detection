@@ -1,6 +1,10 @@
 version: "1.0"
 
 services:
+  preprocessing:
+    build: preprocessing
+    ports:
+      - 8004:8004
   modelserving:
     build: model-serving
     ports:

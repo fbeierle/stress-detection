@@ -32,6 +32,6 @@ df = pd.read_parquet('test-data/eda.parquet', engine='pyarrow')
 st.dataframe(df)
 
 st.write('#### TEMP - temperature - 4 Hz')
-st.write('`temp` indicates the temperatur in Celsius recorded with the Empatica E4 wristband.')
+st.write('`temp` indicates the temperature in Celsius recorded with the Empatica E4 wristband.')
 df = pd.read_parquet('test-data/temp.parquet', engine='pyarrow')
 st.dataframe(df)
