@@ -31,7 +31,7 @@ with col1:
     if not selected_rows_ns.empty:
         valuelist = selected_rows_ns.values[0].tolist()
         json_string = '{\"valuelist\": '+str(valuelist)+'}'
-        print(json_string)
+        #print(json_string)
         payload = json.loads(json_string)
         headers = {'Content-Type': 'application/json', 'Accept':'application/json'}
         if st.button('Send Request to model', key='button01'):
