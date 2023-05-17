@@ -22,7 +22,7 @@ with col1:
     st.write('* Automatically detect stress from wristband sensor data')
 
 
-    st.write('Code is here: https://github.com/fbeierle/stress-recognition')
+    st.write('Code is here: https://github.com/fbeierle/stress-detection')
 
 with col2:
     img_stress = Image.open('images/stress.png')

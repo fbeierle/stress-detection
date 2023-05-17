@@ -23,8 +23,8 @@ You can find the slides here: https://docs.google.com/presentation/d/1jYoSlDwUnz
 ### Deployment
 
 ```
-git checkout https://github.com/fbeierle/stress-recognition.git
-cd stress-recognition
+git checkout https://github.com/fbeierle/stress-detection.git
+cd stress-detection
 docker compose up --build
 ```
 Then you can enter the web-app on port 8003. The model is being served at port 8002. The preprocessing endpoint is running on port 8004.
