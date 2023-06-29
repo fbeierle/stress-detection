@@ -1,6 +1,6 @@
 # Stress Detection
 
-This project predicts stress from sensor data from Empatica E4 wrist bands. The project is build on public datasets. This is the capstone project of Felix Beierle in FourthBrain MLE cohort #10. For more details, check out the deployed web-app or the slides (links below).
+This project detects stress from sensor data from Empatica E4 wrist bands. The project is build on public datasets. For more details, check out the deployed web-app or the slides (links below).
 
 ### ML Pipeline Infrastructure
 
@@ -15,7 +15,7 @@ This project predicts stress from sensor data from Empatica E4 wrist bands. The 
 * If an employer wants to deploy such a model, privacy regulations have to be checked. An alternative would be to deploy a stress detection model as part of an app that a user can choose to install on his/her smartphone.
 
 
-### Project Pitch Slides
+### Project Presentation Slides
 
 You can find the slides here: https://docs.google.com/presentation/d/1jYoSlDwUnzAsbdbXSUTaDwHXt9nIfGFa
 
