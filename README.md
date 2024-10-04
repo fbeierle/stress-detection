@@ -2,14 +2,13 @@
 
 This project detects stress from sensor data from [Empatica E4](https://www.empatica.com/en-eu/research/e4/) wrist bands.
 
-You probably want to check out the **interactive live web app** showcasing the whole project: http://5.189.182.28:8003/
-
 You can also check out a [presentation slides](https://docs.google.com/presentation/d/1jYoSlDwUnzAsbdbXSUTaDwHXt9nIfGFa).
 
 You can also check out our [related publication](https://beierle.de/wp-content/papercite-data/pdf/beierle2023csce.pdf).
 
-[![Interactive Live Web App](webapp.png 'WebApp')](http://5.189.182.28:8003/)
+Check out the interactive web app demo video:
 
+[stress-detection-demo.webm](https://github.com/user-attachments/assets/b7d04621-a1d4-45bf-af67-9fe4b5f4f319)
 
 ### MLE Infrastructure
 
